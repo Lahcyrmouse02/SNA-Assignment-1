@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+  <link>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CORETAX Contoh</title>
+    <meta
+      name="description"
+      content="Direktorat Jenderal Pajak - Core Tax Administration System"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <picture>
+              <source srcset="{{ url_for('static', filename='img/djp-logo.avif') }}" type="image/avif" />
+              <img src="{{ url_for('static', filename='img/djp-logo.png') }}"
+              alt="Logo DJP"
+              class="brand-logo" />
+          </picture>
+        </div>
+        <div class="time-pill" aria-live="polite">
+          <span id="liveTime">—</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container main-area">
+      <section class="card professional">
+        <!-- Left Column -->
+        <div class="left">
+          <h1 class="page-title">Selamat Datang</h1>
+          <p class="lead">
+            test. Anda akan masuk ke <strong>Coretax DJP</strong>. Pastikan Anda
+            menggunakan perangkat dan jaringan yang aman sebelum melanjutkan
+            proses login.
+          </p>
+
+          <div class="tiles">
+            <!-- Tile 1 -->
+            <div class="tile">
+              <div class="icon success">✓</div>
+              <div>
+                <div class="tile-title">Praktik Aman</div>
+                <ul>
+                  <li>Gunakan sandi kuat & aktifkan 2FA.</li>
+                  <li>Perbarui sistem & peramban secara berkala.</li>
+                  <li>Akses melalui jaringan/VPN tepercaya.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Tile 2 -->
+            <div class="tile">
+              <div class="icon warning">!</div>
+              <div>
+                <div class="tile-title">Hindari</div>
+                <ul>
+                  <li>Membagikan OTP/kode otorisasi.</li>
+                  <li>Mengklik tautan yang tidak dikenal.</li>
+                  <li>Meninggalkan perangkat tanpa terkunci.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Section -->
+          <div class="faq">
+            <p>Butuh panduan? Kunjungi <strong>Coretaxpedia</strong>.</p>
+            <a
+              class="coretaxpedia-link"
+              title="Coretaxpedia"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <picture>
+                <source srcset="{{ url_for('static', filename='img/coretaxpedia.avif') }}" type="image/avif" />
+                <img
+                  src="{{ url_for('static', filename='img/coretaxpedia.png') }}"
+                  alt="Coretaxpedia"
+                  class="coretaxpedia-img"
+                />
+              </picture>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right">
+          <div class="cta">
+            <picture>
+              <source srcset="{{ url_for('static', filename='img/coretax.avif') }}" type="image/avif" />
+              <img
+                src="{{ url_for('static', filename='img/coretax.png') }}"
+                alt="Coretax DJP logo featuring the Core Tax Administration System branding for the Indonesian tax authority"
+                class="ct-logo"/>
+            </picture>
+
+
+            <p class="cta-desc">
+              Nikmati kemudahan akses layanan perpajakan melalui Coretax DJP.
+            </p>
+
+            <button class="btn btn-primary">Lanjutkan ➜</button>
+
+            <p class="footnote">
+              Dengan melanjutkan, Anda menyetujui ketentuan penggunaan dan
+              kebijakan keamanan DJP.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="fineprint">
+          © <span id="currentYear"></span> Direktorat Jenderal Pajak. Seluruh
+          hak cipta dilindungi.
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
